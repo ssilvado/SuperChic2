@@ -1,0 +1,5 @@
+CURRDIR=/afs/cern.ch/work/s/ssilvado/public/GluinoProd
+
+./superchic < input_gluino_decay_bb.DAT
+
+cp evrecs/evrecgluino_decay_bb.dat ${CURRDIR}

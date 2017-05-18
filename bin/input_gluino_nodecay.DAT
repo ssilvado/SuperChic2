@@ -1,0 +1,126 @@
+****************************************************************************************
+***********  RE-RUN ./init IF FIRST FIVE PARAMETERS ARE CHANGED:  **********************
+****************************************************************************************
+13d3            !  [rts] : CMS collision energy (GeV)
+4	       !  [isurv] : Model of soft survival (from 1 -> 4, corresponding to arXiv:1306.2149)
+'gluino_nodecay'         !  [intag] for input files 
+****************************************************************************************
+****************************************************************************************
+'MMHT2014lo68cl'     ! [PDFname] : PDF set
+0                    ! [PDFmember] : PDF member
+****************************************************************************************
+68	!  [proc] : Process number (see manual for labelling)
+gluino_nodecay       !  [outtg] : for output file
+.true.        !  [sfaci] : Include soft survival effects
+****************************************************************************************
+************************* Integration parameters ***************************************
+****************************************************************************************
+1000          ! [ncall] : Number of calls for preconditioning
+10             ! [itmx] : Number of iterations for preconditioning
+1d0         ! [prec] :  Relative accuracy (in %) in main run
+10000           ! [ncall1] : Number of calls in first iteration
+10000           ! [inccall] : Number of increase calls per iteration
+1000           ! [itend] : Maximum number of iterations
+860              ! [iseed] : Random number seed (integer > 0)
+****************************************************************************************
+8            ! [s2int] : Survival factor integration : see manual for recommendation
+****************************************************************************************
+******************************* Unweighted events **************************************
+****************************************************************************************
+.true.       ! [genunw] : Generate unweighted events
+1000            ! [nev] : Number of events ( < 1000000 recommended)
+lhe	      ! [erec] : Event record format ('lhe' = Les Houches, 'hepevt' = HEPEVT)
+.false.	      ! [readwt] : Set to true to read in pre-calculated maxium weight below
+0d0     ! [wtmax] : Maximum weight
+****************************************************************************************
+*******************************   general cuts    **************************************
+****************************************************************************************
+-2.4d0           ! [ymin] : Minimum object rapidity Y_X
+2.4d0        ! [ymax] : Maximum object rapidity Y_X
+20d0          ! [mmin] : Minimum object mass M_X (redundant for resonance production)
+2000d0         ! [mmax] : Maximum object mass M_X (redundant for resonance production)
+.true.        ! [gencuts] : Generate cuts below
+.true.        ! [scorr] : Include spin correlations (for chi_c/b decays)
+.true.	       ! [fwidth] : Include finite width (for chi_c decays)
+****************************************************************************************
+************************ See manual for momentum assignments ***************************
+****************************************************************************************
+************************* 2 body final states : p(a) + p(b) ****************************
+****************************************************************************************
+10d0         ! [ptamin]
+10d0         ! [ptbmin]
+-2.4d0         ! [etaamin]
+2.4d0       ! [etaamax]
+-2.4d0         ! [etabmin]
+2.4d0       ! [etabmax]
+****************************************************************************************
+********************** 3 body final states : p(a) + p(b) + p(c) ************************
+****************************************************************************************
+20d0         ! [ptamin]
+20d0         ! [ptbmin]
+20d0         ! [ptcmin]
+-2.5d0         ! [etaamin]	
+2.5d0       ! [etaamax]
+-2.5d0         ! [etabmin]	
+2.5d0       ! [etabmax]	
+-2.5d0         ! [etacmin]		
+2.5d0       ! [etacmax]	
+****************************************************************************************
+****************** 4 body final states : p(a) + p(b) + p(c)+ p(d) **********************
+****************************************************************************************
+0d0         ! [ptamin]
+0d0         ! [ptbmin]
+0d0         ! [ptcmin]
+0d0         ! [ptdmin]
+-2.5d0         ! [etaamin]	
+2.5d0       ! [etaamax]
+-2.5d0         ! [etabmin]	
+2.5d0       ! [etabmax]	
+-2.5d0         ! [etacmin]		
+2.5d0       ! [etacmax]
+-2.5d0         ! [etadmin]		
+2.5d0       ! [etadmax]	
+****************************************************************************************
+*********** 6 body final states : p(a) + p(b) + p(c)+ p(d) + p(e) + p(f) ***************
+****************************************************************************************
+0d0         ! [ptamin]
+0d0         ! [ptbmin]
+0d0         ! [ptcmin]
+0d0         ! [ptdmin]
+0d0         ! [ptemin]
+0d0         ! [ptfmin]
+-2.5d0         ! [etaamin]	
+2.5d0       ! [etaamax]
+-2.5d0         ! [etabmin]	
+2.5d0       ! [etabmax]	
+-2.5d0         ! [etacmin]		
+2.5d0       ! [etacmax]
+-2.5d0         ! [etadmin]		
+2.5d0       ! [etadmax]	
+-2.5d0         ! [etaemin]		
+2.5d0       ! [etaemax]	
+-2.5d0         ! [etafmin]		
+2.5d0       ! [etafmax]	
+****************************************************************************************
+*******   Jet algorithm parameters
+****************************************************************************************
+0.6d0      ! [rjet] : Jet Radius
+'antikt'       ! [jalg] : Jet algorithm ('antikt','kt')
+****************************************************************************************
+******  chi_c/b two-body decays
+****************************************************************************************
+0.133d0	     ! [m2b] : mass of decay particles
+211          ! [pdgid1] : PDG number particle 1
+-211         ! [pdgid2] : PDG number particle 2
+****************************************************************************************
+******  sparticles masses - SPS2
+****************************************************************************************
+1	     ! [pdgid1] : PDG number particle 1
+1	     ! [pdgid2] : PDG number particle 2
+0.008919d0   ! [br1] : branching ratio 1
+0.008919d0   ! [br2] : branching ratio 2
+801.879d0    ! [mgo] : gluino mass
+122.306d0    ! [mneut] : neutralino mass
+228.674d0    ! [mcharg] : chargino mass
+****************************************************************************************
+****************************************************************************************
